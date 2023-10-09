@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: red;
+    overflow: hidden;
+    min-width: 100%;
+    min-height: 150%;
+
+}
+.gameContainer{
+    min-width: 100vw;
+    min-height: 100vh;
+    background: url(images/bg.png);
+    background-repeat: no-repeat;
+    background-position:150%;
+    background-size: cover;
+    position: absolute;
+
+}
+.piku{
+    background: url(images/flying_Bird.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 140px;
+    height: 130px;
+    bottom: 0;
+    position: absolute;
+    left: 2px;
+}
+.animatePiku{
+    animation: animatePiku 0.6s ease-in-out;
+}
+@keyframes animatePiku {
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 450px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+.obstacle{
+    background: url(images/Cactus.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom: 0;
+    position: absolute;
+    left: 50vw;
+ 
+}
+.active{
+    animation: animateObstacle 5s infinite linear;
+}
+.obstacle.sm{
+    width: 6rem;
+    height: 7rem;
+}
+.obstacle.md{
+    width: 6rem;
+    height: 9rem;
+}
+.obstacle.lg{
+    width: 6rem;
+    height: 12rem;
+}
+
+@keyframes animateObstacle {
+    0%{
+        left: 100vw;
+    }
+    100%{
+       left: -10vw;
+    }
+}
+.gameOver{
+    visibility:visible;
+    position: relative;
+    top: 60px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30Px;
+    color: red;
+    text-align: center;
+}
+
+#scoreCont{
+    position: relative;
+    left: 25px;
+    top: 30px;
+    border: 2px solid black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 100px;
+    text-align: center;
+    font-weight: 600;
+}
